@@ -1,0 +1,25 @@
+{
+  "name": "gitpokedex",
+  "version": "1.0.0",
+  "description": "Projeto inicial de pokedex",
+  "main": "index.js",
+  "scripts": {
+    "start": "no index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jackson-23/Gitpokedex.git"
+  },
+  "author": "Jackson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jackson-23/Gitpokedex/issues"
+  },
+  "homepage": "https://github.com/Jackson-23/Gitpokedex#readme",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
