@@ -1,14 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Link Start</h1>
-    <p>Olá galera!</p>    
-</body>
+  </head>
+  <body>
+      
+    <header>
+        <div>
+            <img id="logo" src="/images/pokemon-logo-8.png" alt="Logo Pokemon">
+        </div>
+        
+        <div id="dmenu">
+            <nav>
+                <ul id="menu">
+                    <li>Home</li>
+                    <li>Pokemons</li>
+                    <li>Mundo Pokemon</li>
+                </ul>
+            </nav>
+        
+        </div>
+
+    </header>
+
+    <main>
+        <h1>Pokedex</h1>
+
+
+        <section id="cards">
+            
+            <% pokedex.forEach((pokemon) => { %>
+                <a href="/detalhes/<%= pokemon.id %>">
+                    <div class="card">
+                        <img src="<%= pokemon.imagem %>" alt="" />
+                        <h2><%= pokemon.nome %></h2>
+                        <p><%= pokemon.descricao %></p>
+                        <p><%= pokemon.tipo %></p>
+                    </div>
+                </a>
+            <% }) %>
+        </section>
+
+        <section id="cadastro">
+            <h2>Cadastro.</h2>
+
+            <form action="/add" method="POST">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" name="descricao">
+
+                <label for="tipo">Tipo:</label>
+                <input type="text" id="tipo" name="tipo">
+
+                <label for="imagem">Link</label>
+                <input type="url" id="imagem" name="imagem">
+
+                <button id="btnCadastro" type="submit">Cadastrar</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer></footer>
+  </body>
 </html>

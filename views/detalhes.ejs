@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+        <h1><a href="/" >Pokedex</a></h1>
+    </header>
+
+    <main>
+
+        <section id="cards">
+       
+                    <div class="card" id="noclickcard">
+                        <img src="<%= pokemon.imagem %>"/>
+                        <h2><%= pokemon.nome %></h2>
+                        <p><%= pokemon.descricao %></p>
+                        <p><%= pokemon.tipo %></p>
+                    </div>
+
+        </section>
+
+        <section id="cadastro">
+            <h2>Editar cadastro.</h2>
+
+            <form action="/update" method="post">
+
+                <input type="hidden" id="id" name="id" value=<%= pokemon.id %>>
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" value=<%= pokemon.nome %>>
+
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" name="descricao" value=<%= pokemon.descricao %>>
+
+                <label for="tipo">Tipo:</label>
+                <input type="text" id="tipo" name="tipo" value=<%= pokemon.tipo %>>
+
+                <label for="imagem">Link</label>
+                <input type="text" id="imagem" name="imagem" value="<%= pokemon.imagem %>">
+
+                <button id="btnCadastro" type="submit">Alterar</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

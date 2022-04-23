@@ -4,7 +4,7 @@
   "description": "Projeto inicial de pokedex",
   "main": "index.js",
   "scripts": {
-    "start": "no index.js",
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "repository": {
