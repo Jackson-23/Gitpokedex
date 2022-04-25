@@ -9,8 +9,23 @@
   </head>
   <body>
     <header>
-        <h1><a href="/" >Pokedex</a></h1>
-    </header>
+      <div>
+          <a href="/">
+              <img id="logo" src="/images/pokemon-logo-8.png" alt="Logo Pokemon">
+          </a>
+      </div>
+      
+      <div id="dmenu">
+          <nav>
+              <ul id="menu">
+                <a href="/"><li>Home</li></a>
+                <a href="/cadastrar"><li>Cadastrar</li></a>
+              </ul>
+          </nav>
+      
+      </div>
+
+  </header>
 
     <main>
 
@@ -26,27 +41,34 @@
         </section>
 
         <section id="cadastro">
-            <h2>Editar cadastro.</h2>
 
+
+          <div id="fundo">
+            
             <form action="/update" method="post">
-
+                <h2>Editar cadastro.</h2>
                 <input type="hidden" id="id" name="id" value=<%= pokemon.id %>>
 
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" value=<%= pokemon.nome %>>
+                <input type="text" id="nome" name="nome" required value=<%= pokemon.nome %>>
 
                 <label for="descricao">Descrição:</label>
-                <input type="text" id="descricao" name="descricao" value=<%= pokemon.descricao %>>
+                <input type="text" id="descricao" name="descricao" required value=<%= pokemon.descricao %>>
 
                 <label for="tipo">Tipo:</label>
-                <input type="text" id="tipo" name="tipo" value=<%= pokemon.tipo %>>
+                <input type="text" id="tipo" name="tipo" required value=<%= pokemon.tipo %>>
 
                 <label for="imagem">Link</label>
-                <input type="text" id="imagem" name="imagem" value="<%= pokemon.imagem %>">
+                <input type="text" id="imagem" name="imagem" required value="<%= pokemon.imagem %>">
 
-                <button id="btnCadastro" type="submit">Alterar</button>
+                <div id="button">
+                  <button id="btnCadastro" type="submit">Alterar</button>
+                  <a id="delete" href="/deletar/<%= pokemon.id %>"><button id="btnDelete" type="button">Deletar</button></a>                  
+                </div>
 
             </form>
+
+          </div>
         </section>
 
     </main>

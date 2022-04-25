@@ -29,23 +29,7 @@
     </header>
 
     <main>
-        <h1 hidden>Pokedex</h1>
-
-
-        <section id="cards">
-            
-            <% pokedex.forEach((pokemon) => { %>
-                <a href="/detalhes/<%= pokemon.id %>">
-                    <div class="card">
-                        <img src="<%= pokemon.imagem %>" alt="" />
-                        <h2><%= pokemon.nome %></h2>
-                        <p><%= pokemon.descricao %></p>
-                        <p><%= pokemon.tipo %></p>
-                    </div>
-                </a>
-            <% }) %>
-        </section>
-
+        
         <section id="cadastro">
             <div id="fundo">
                 <h2>Cadastro.</h2>
