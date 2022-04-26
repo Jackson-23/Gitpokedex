@@ -76,7 +76,7 @@ const pokedex = [
 
 //ROTAS
 app.get("/", (req, res) => {
-  res.render("index", { pokedex });
+  res.status(200).render("index", { pokedex });
 });
 
 app.post("/add", (req, res) => {
@@ -86,7 +86,7 @@ app.post("/add", (req, res) => {
   pokesquantid++;
   pokedex.push(pokemon);
   console.log(pokemon.id);
-  res.redirect("/");
+  res.status(200).redirect("/");
 });
 
 app.post("/update", (req, res) => {
@@ -94,7 +94,7 @@ app.post("/update", (req, res) => {
   const id = +req.body.id;
   const indice = pokedex.findIndex((pokemon) => pokemon.id == id);
   pokedex[indice] = pokemon;
-  res.redirect(`detalhes/${req.body.id}`);
+  res.status(200).redirect(`detalhes/${req.body.id}`);
 });
 
 app.get("/detalhes/:id", (req, res) => {
@@ -102,11 +102,11 @@ app.get("/detalhes/:id", (req, res) => {
   console.log(+req.params.id);
   let pokemon = pokedex.find((pokemon) => pokemon.id == id);
   console.log(pokemon);
-  res.render("detalhes", { pokemon });
+  res.status(200).render("detalhes", { pokemon });
 });
 
 app.get("/cadastrar", (req, res) => {
-  res.render("cadastrar");
+  res.status(200).render("cadastrar");
 });
 
 app.get("/deletar/:id", (req, res) => {
@@ -115,12 +115,12 @@ app.get("/deletar/:id", (req, res) => {
   console.log(id + " delete");
   const indice = pokedex.findIndex((pokemon) => pokemon.id == id);
   pokedex.splice(indice, 1);
-  res.redirect("/");
+  res.status(200).redirect("/");
 });
 
 
 app.get("/home", (req, res) => {
-  res.redirect("/");
+  res.status(200).redirect("/");
 });
 
 app.listen(3000, () =>
