@@ -3,9 +3,11 @@ const req = require("express/lib/request");
 const app = express();
 const path = require("path");
 
+dotenv.config();
+
 //configurações
 app.set("view engine", "ejs");
-const PORT = 3000 || "https://git-pokedex00748.herokuapp.com/" || process.env.PORT;
+const PORT = 3000 || process.env.PORT;
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 

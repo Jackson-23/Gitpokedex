@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/Jackson-23/Gitpokedex#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "ejs": "^3.1.7",
     "express": "^4.17.3",
     "nodemon": "^2.0.15"
-  },
-  "devDependencies": {}
+  }
 }
