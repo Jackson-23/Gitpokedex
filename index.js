@@ -9,7 +9,7 @@ dotenv.config();
 
 //configurações
 app.set("view engine", "ejs");
-const PORT = 3000 || process.env.PORT || "gitpokedex.vercel.app";
+const PORT = process.env.PORT || 3000 ||/* "gitpokedex.vercel.app"*/;
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 
