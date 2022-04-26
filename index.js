@@ -1,4 +1,4 @@
-import dotenv from 'dotevn';
+import dotenv from 'dotenv';
 
 const express = require("express");
 const req = require("express/lib/request");
