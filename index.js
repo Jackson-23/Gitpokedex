@@ -5,7 +5,7 @@ const path = require("path");
 
 //configurações
 app.set("view engine", "ejs");
-const port = 3000 || "https://damp-journey-67364.herokuapp.com/";
+const PORT = 3000 || "https://damp-journey-67364.herokuapp.com/" || process.env.PORT;
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 
