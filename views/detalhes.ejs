@@ -34,8 +34,8 @@
                     <div class="card" id="noclickcard">
                         <img src="<%= pokemon.imagem %>"/>
                         <h2><%= pokemon.nome %></h2>
-                        <p><%= pokemon.descricao %></p>
                         <p><%= pokemon.tipo %></p>
+                        <p><%= pokemon.descricao %></p>                       
                     </div>
 
         </section>
@@ -51,12 +51,12 @@
 
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required value=<%= pokemon.nome %>>
-
-                <label for="descricao">Descrição:</label>
-                <input type="text" id="descricao" name="descricao" required value=<%= pokemon.descricao %>>
-
+                
                 <label for="tipo">Tipo:</label>
                 <input type="text" id="tipo" name="tipo" required value=<%= pokemon.tipo %>>
+                
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" name="descricao" required value="<%= pokemon.descricao %>">
 
                 <label for="imagem">Link</label>
                 <input type="text" id="imagem" name="imagem" required value="<%= pokemon.imagem %>">

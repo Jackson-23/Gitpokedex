@@ -108,6 +108,11 @@ section#cards div.card h2{
    margin-bottom: 1rem;
 }
 
+section#cards div.card p{
+   margin: 1rem;
+   
+}
+
 section#cadastro{
    color: white;
    display: flex;
@@ -123,6 +128,11 @@ section#cadastro div#fundo{
    min-width: 10rem;
    background-color: rgba(0, 0, 0, 0.491);
    border-radius: 15px;
+}
+
+section#cadastro button.cad{
+   display: flex;
+   margin: 2rem auto;
 }
 
 section#cadastro div#button{
