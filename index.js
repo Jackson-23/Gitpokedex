@@ -1,9 +1,11 @@
+import dotenv from 'dotenv';
 
 const express = require("express");
 const req = require("express/lib/request");
 const app = express();
 const path = require("path");
 
+dotenv.config();
 
 //configurações
 app.set("view engine", "ejs");
