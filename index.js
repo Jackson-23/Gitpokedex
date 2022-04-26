@@ -87,7 +87,9 @@ app.post("/add", (req, res) => {
 
 app.post("/update", (req, res) => {
   let pokemon = req.body;
-  pokedex[pokemon.id - 1] = pokemon;
+  const id = +req.body.id;
+  const indice = pokedex.findIndex((pokemon) => pokemon.id == id);
+  pokedex[indice] = pokemon;
   res.redirect(`detalhes/${req.body.id}`);
 });
 
@@ -104,8 +106,7 @@ app.get("/cadastrar", (req, res) => {
 });
 
 app.get("/deletar/:id", (req, res) => {
-  console.log(+req.params.idq);
-
+  console.log(+req.params.id);
   const id = +req.params.id;
   console.log(id + " delete");
   const indice = pokedex.findIndex((pokemon) => pokemon.id == id);
